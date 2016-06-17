@@ -308,7 +308,7 @@ DEPENDENCIES
   better_errors (~> 2.1)
   binding_of_caller
   brakeman
-  cancancan (~> 1.10)
+  cancancan
   capybara
   coffee-rails (~> 4.0.0)
   database_cleaner

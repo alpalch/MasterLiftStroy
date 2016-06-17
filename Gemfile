@@ -11,7 +11,7 @@ gem 'sass-rails', '~> 5.0.4'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'turbolinks'
-gem 'cancancan', '~> 1.10'
+gem 'cancancan'
 gem 'dotenv-rails'
 gem 'jquery-rails'
 
