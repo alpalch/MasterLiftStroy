@@ -14,6 +14,7 @@ gem 'turbolinks'
 gem 'cancancan'
 gem 'dotenv-rails'
 gem 'jquery-rails'
+gem 'puma'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'
@@ -30,6 +31,11 @@ group :test do
 end
 
 group :development do
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
   gem 'brakeman',   require: false
   gem 'rubycritic', require: false
   gem 'rubocop',    require: false
