@@ -7,7 +7,17 @@
 # Ignore bundler config.
 /.bundle
 
+.DS_Store
+config/database.yml
+config/secrets.yml
+.idea
+config/application.yml
+
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
 /tmp
+rails_best_practices_output.html
+.env
+coverage
+/public/uploads
