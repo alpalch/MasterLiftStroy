@@ -17,9 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  host: localhost
 
 development:
   <<: *default
@@ -80,6 +79,5 @@ test:
 #
 production:
   <<: *default
-  database: MasterLiftStroy_production
-  username: MasterLiftStroy
-  password: <%= ENV['MASTERLIFTSTROY_DATABASE_PASSWORD'] %>
+  database: postgres
+  host: localhost

@@ -9,7 +9,6 @@
 
 .DS_Store
 config/database.yml
-config/secrets.yml
 .idea
 config/application.yml
 
