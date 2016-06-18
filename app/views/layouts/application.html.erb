@@ -1,14 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MasterLiftStroy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>MasterLiftStroy Ltd.</title>
+
+  <!-- Include style per-controller - vendor plugins -->
+  <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") %>
+
+  <!-- Main css styles -->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'development', media: 'all', 'data-turbolinks-track' => true %>
+
+  <!-- Main javascript files -->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'development', 'data-turbolinks-track' => true %>
+  <% content_for :javascript_includes do %>
+      <%= javascript_include_tag "forms.js" %>
+  <% end %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<!-- Skin configuration box -->
+<!-- <%= render 'layouts/main_components/skinconfig' %> -->
 
+<!-- Wrapper-->
+<div id="wrapper" class="<%= params[:controller] %>.<%= params[:action] %>">
+
+  <!-- Navigation -->
+  <%= render 'layouts/main_components/navigation' %>
+
+  <!-- Page wraper -->
+  <div id="page-wrapper" class="gray-bg <%= @extra_class %>">
+
+    <!-- Page wrapper -->
+    <%= render 'layouts/main_components/topnavbar' %>
+
+    <!-- Main view  -->
+    <%= yield %>
+
+    <!-- Footer -->
+    <%= render 'layouts/main_components/footer' %>
+
+  </div>
+  <!-- End page wrapper-->
+
+</div>
+<!-- End wrapper-->
+
+<!-- Include javascript per-controller - vendor plugins -->
+<%= javascript_include_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.js") %>
 </body>
 </html>
