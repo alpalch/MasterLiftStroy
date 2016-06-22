@@ -2,15 +2,28 @@
 // listed below.
 //
 // Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or any plugin's vendor/assets/javascripts directory can be referenced here using a relative path.
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
 //
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
-// about supported directives.
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require bootstrap-sprockets.js
+//= require dataTables/datatables.min.js
+//= require metisMenu/jquery.metisMenu.js
+//= require pace/pace.min.js
+//= require peity/jquery.peity.min.js
+//= require slimscroll/jquery.slimscroll.min.js
+//= require inspinia.js
+//= require chosen/chosen.jquery.js
+//= require datapicker/bootstrap-datepicker.js
+//= require touchspin/jquery.bootstrap-touchspin.min.js
+$(function() {
+    $(".project-statistic-progress-bar").click(function (){
+        var projectId = this.id;
+        $.post("/employee/reports/project_info", {user_project_plan_id: projectId}, function (data) {
+            $('#projectInfo').empty();
+            $('#projectInfo').append(data['project_plan']);
+            $('#projectStatisticPopup').modal('show');
+        });
+    });
+});

@@ -10,6 +10,7 @@
 .DS_Store
 config/database.yml
 .idea
+.idea/MasterLiftStroy.iml
 config/application.yml
 
 # Ignore all logfiles and tempfiles.
