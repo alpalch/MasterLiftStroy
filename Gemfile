@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'rails', '4.2.6'
 gem 'pg'
+gem 'nokogiri', '1.6.8'
 gem 'paperclip'
 gem 'pry'
 gem 'binding_of_caller'
@@ -19,6 +20,7 @@ gem 'font-awesome-rails', '4.3.0.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
 gem 'font-awesome-rails', '4.3.0.0'
 gem 'puma'
+gem 'therubyracer'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'

@@ -2,7 +2,7 @@
 server '46.101.223.180', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'git@github.com:alpalch/MasterLiftStroy.git'
-set :application,     'MasterLiftStroy'
+set :application,     'masterliftstroy'
 set :user,            'admin'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
@@ -25,10 +25,10 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 
 ## Defaults:
 # set :scm,           :git
-# set :branch,        'production'
+set :branch,        'master'
 # set :format,        :pretty
 # set :log_level,     :debug
-# set :keep_releases, 5
+ set :keep_releases, 1
 
 ## Linked Files & Directories (Default None):
 set :linked_files, %w{config/database.yml}
