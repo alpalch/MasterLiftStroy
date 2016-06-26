@@ -9,11 +9,9 @@
 
   <!-- Main css styles -->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'development', media: 'all', 'data-turbolinks-track' => true %>
 
   <!-- Main javascript files -->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'development', 'data-turbolinks-track' => true %>
   <% content_for :javascript_includes do %>
       <%= javascript_include_tag "forms.js" %>
   <% end %>

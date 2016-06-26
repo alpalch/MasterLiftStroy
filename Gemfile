@@ -21,6 +21,7 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
 gem 'font-awesome-rails', '4.3.0.0'
 gem 'puma'
 gem 'therubyracer'
+gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'
