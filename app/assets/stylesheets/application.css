@@ -26,3 +26,6 @@ body #logo {
 #sessions {
     background-color: mintcream;
 }
+.admin-stuff {
+    display: none;
+}

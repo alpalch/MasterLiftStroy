@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   devise_for :users
   devise_scope :user do
-    get 'users/admin', to: 'devise/session#new'
+    get 'users/admin', to: 'devise/sessions#new'
     # Route to logout button
-    get '/users/sign_out', to: 'sessions#destroy'
+    post '/users/sign_out', to: 'devise/sessions#destroy'
   end
 end

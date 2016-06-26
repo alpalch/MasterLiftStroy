@@ -8,7 +8,7 @@
                 <span class="m-r-sm text-muted welcome-message" data-i18n="topnav.welcometext">MasterLiftStroy Ltd.</span>
             </li>
             <li>
-          <li><%= link_to 'Log out'%></li>
+          <li><%= link_to 'Log out', users_sign_out_path, method: :destroy%></li>
         </li>
     </ul>
 </nav>

@@ -61,7 +61,6 @@ GEM
       momentjs-rails (>= 2.8.1)
     brakeman (3.3.2)
     builder (3.2.2)
-    cancancan (1.15.0)
     capistrano (3.5.0)
       airbrussh (>= 1.0.0)
       capistrano-harrow
@@ -366,7 +365,6 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.6)
   bootstrap3-datetimepicker-rails (~> 4.17.37)
   brakeman
-  cancancan
   capistrano
   capistrano-bundler
   capistrano-rails
