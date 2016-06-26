@@ -15,6 +15,9 @@
  *= require chosen/chosen.css
  *= require datapicker/datepicker3.css
  *= require touchspin/jquery.bootstrap-touchspin.min.css
+ //= require blueimp/css/blueimp-gallery.min.css
+ //= require slick/slick.css
+ //= require slick/slick-theme.css
  */
 
 body #logo {

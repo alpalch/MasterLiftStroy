@@ -17,6 +17,8 @@
 //= require chosen/chosen.jquery.js
 //= require datapicker/bootstrap-datepicker.js
 //= require touchspin/jquery.bootstrap-touchspin.min.js
+//= require blueimp/jquery.blueimp-gallery.min.js
+//= require slick/slick.min.js
 $(function() {
     $(".project-statistic-progress-bar").click(function (){
         var projectId = this.id;
