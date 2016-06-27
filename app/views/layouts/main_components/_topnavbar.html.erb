@@ -5,7 +5,7 @@
                 <span class="m-r-sm text-muted welcome-message" data-i18n="topnav.welcometext">MasterLiftStroy Ltd.</span>
             </li>
             <li>
-          <li><%= link_to 'Log out', users_sign_out_path, method: :destroy%></li>
+          <li><a rel="nofollow" data-method="destroy" href="/users/sign_out" id="<%= 'admin-stuff' unless current_user.try(:id)%>">Log out</a></li>
         </li>
     </ul>
 </nav>
