@@ -2,6 +2,6 @@
 class ServicesController < ApplicationController
 
   def our_services
-    @posts = Post.all.service
+    @posts = Post.all.service.sort_by &:created_at
   end
 end

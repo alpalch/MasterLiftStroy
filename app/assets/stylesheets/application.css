@@ -15,20 +15,23 @@
  *= require chosen/chosen.css
  *= require datapicker/datepicker3.css
  *= require touchspin/jquery.bootstrap-touchspin.min.css
- //= require blueimp/css/blueimp-gallery.min.css
- //= require slick/slick.css
- //= require slick/slick-theme.css
+ *= require blueimp/css/blueimp-gallery.min.css
+ *= require slick/slick.css
+ *= require slick/slick-theme.css
  */
 
-body #logo {
-    height: 30vh;
-    background-image: url('start/sloboda_logo.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-}
 #sessions {
     background-color: mintcream;
 }
 #admin-stuff {
     display: none;
+}
+.btn {
+    margin-bottom: 25px !important;
+}
+.post-list {
+    list-style-type: none;
+}
+footer{
+
 }

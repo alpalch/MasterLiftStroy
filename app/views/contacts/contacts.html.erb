@@ -1,7 +1,23 @@
-<% @posts.each do |post| %>
-    <%= post.title %>
-    <%= image_tag post.photo.url(:small) unless post.photo_file_size == nil %>
-    <%= post.content %>
-<% end %>
+<a href="<%= new_post_path %>" id="<%= 'admin-stuff' unless current_user.try(:id)%>" class='btn btn-w-m btn-primary' >New Post</a>
 
-<a href="<%= new_post_path %>" id="<%= 'admin-stuff' unless current_user.try(:id)%>">New Post</a>
+<table>
+  <tbody>
+  <% @posts.each do |post| %>
+      <div>
+        <td><h3><%= post.title %></h3></td>
+        <tr>
+          <td><%= image_tag post.photo.url(:small) unless post.photo_file_size == nil %></td>
+          <td><%= post.content %></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td id="<%= 'admin-stuff' unless current_user.try(:id)%>">
+            <%= link_to 'Show', post, class: 'btn btn-w-m btn-primary' %>
+            <%= link_to 'Edit', edit_post_path(post), class: 'btn btn-w-m btn-primary' %>
+            <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-w-m btn-primary' %>
+          </td>
+        </tr>
+      </div>
+  <% end %>
+  </tbody>
+</table>

@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.all.main
+    @posts = Post.all.main.sort_by &:created_at
   end
 
   # GET /posts/1
