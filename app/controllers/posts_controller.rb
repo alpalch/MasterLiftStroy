@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.all
+    @posts = Post.all.main
   end
 
   # GET /posts/1
@@ -53,6 +53,6 @@ class PostsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def post_params
-      params.require(:post).permit(:title, :content, :photo)
+      params.require(:post).permit(:title, :content, :photo, :page)
     end
 end

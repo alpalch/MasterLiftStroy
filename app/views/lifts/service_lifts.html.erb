@@ -1,5 +1,7 @@
 <% @posts.each do |post| %>
     <%= post.title %>
-    <%= image_tag post.photo.url(:small) %>
+    <%= image_tag post.photo.url(:small) unless post.photo_file_size == nil %>
     <%= post.content %>
 <% end %>
+
+<a href="<%= new_post_path %>" id="<%= 'admin-stuff' unless current_user.try(:id)%>">New Post</a>

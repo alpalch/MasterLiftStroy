@@ -11,9 +11,9 @@
   </thead>
 
   <tbody>
-    <% @posts.main.each do |post| %>
+    <% @posts.each do |post| %>
       <tr>
-        <td><%= image_tag post.photo.url(:small) %></td>
+        <td><%= image_tag post.photo.url(:small) unless post.photo_file_size == nil %></td>
         <td><%= post.title %></td>
         <td><%= post.content %></td>
         <td id="<%= 'admin-stuff' unless current_user.try(:id)%>"><%= link_to 'Show', post%></td>
@@ -25,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<a href="<%= new_post_path %>" id="<%= 'admin-stuff' unless current_user.try(:id)%>">New Post</a>

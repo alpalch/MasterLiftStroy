@@ -2,7 +2,7 @@
 class LiftsController < ApplicationController
 
   def shaft_lifts
-    @posts = Post.all.shaft_lifts
+    @posts = Post.all.shaft_lift
   end
 
   def service_lifts
