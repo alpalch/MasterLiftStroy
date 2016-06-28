@@ -1,1 +1,5 @@
-<h1>Coming soon. Please be patient!</h1>
+<% @posts.each do |post| %>
+    <%= post.title %>
+    <%= image_tag post.photo.url(:small) %>
+    <%= post.content %>
+<% end %>
