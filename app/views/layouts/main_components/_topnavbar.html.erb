@@ -1,12 +1,15 @@
 <div class="row border-bottom">
+    <span>
+      <img alt="image" class="img-circle" src="<%= image_url 'logo_251x90.png' %>"/>
+    </span>
     <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-        <ul class="nav navbar-top-links navbar-right">
-            <li>
-                <span class="m-r-sm text-muted welcome-message" data-i18n="topnav.welcometext">MasterLiftStroy Ltd.</span>
-            </li>
-            <li>
-          <li><a rel="nofollow" data-method="destroy" href="/users/sign_out" id="<%= 'admin-stuff' unless current_user.try(:id)%>">Log out</a></li>
+      <ul class="nav navbar-top-links navbar-right">
+        <li>
+          <span class="m-r-sm text-muted welcome-message" data-i18n="topnav.welcometext">MasterLiftStroy Ltd.</span>
         </li>
+        <li>
+      <li><a rel="nofollow" data-method="destroy" href="/users/sign_out" id="<%= 'admin-stuff' unless current_user.try(:id)%>">Log out</a></li>
+      </li>
     </ul>
 </nav>
 </div>
