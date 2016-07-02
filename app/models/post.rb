@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
 
 
-  #Scopes for display spicific contect on every page
+  #Scopes for display specific content on every page
   scope :main,         -> { where(page: 'index') }
   scope :service_lift, -> { where(page: 'service_lift') }
   scope :shaft_lift,   -> { where(page: 'shaft_lift') }

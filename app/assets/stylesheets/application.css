@@ -35,3 +35,8 @@
 footer{
 
 }
+#contacts-list {
+    list-style-type: none !important;
+    float: right;
+    margin-right: 10vw;
+}

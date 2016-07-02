@@ -1,15 +1,17 @@
 <div class="row border-bottom">
-    <span>
-      <img alt="image" class="img-circle" src="<%= image_url 'logo_251x90.png' %>"/>
-    </span>
-    <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-      <ul class="nav navbar-top-links navbar-right">
-        <li>
-          <span class="m-r-sm text-muted welcome-message" data-i18n="topnav.welcometext">MasterLiftStroy Ltd.</span>
-        </li>
-        <li>
+  <span>
+    <img alt="image" class="img-circle" src="<%= image_url 'logo_251x90.png' %>"/>
+  </span>
+  <ul id="contacts-list">
+    <li><%= image_tag 'HN-email.png' %>some@email.com</li>
+    <li><%= image_tag 'vodafone.png' %>+380665698754</li>
+    <li><%= image_tag 'kievstar.png' %>+380675897458</li>
+    <li><%= image_tag 'life_0.jpg' %>+380632155474</li>
+  </ul>
+  <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+    <ul class="nav navbar-top-links navbar-right">
       <li><a rel="nofollow" data-method="destroy" href="/users/sign_out" id="<%= 'admin-stuff' unless current_user.try(:id)%>">Log out</a></li>
       </li>
     </ul>
-</nav>
+  </nav>
 </div>
